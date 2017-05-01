@@ -10,6 +10,6 @@ services:
   internal.example.com: 
     build: internal
     environment:
-      GATEWAY_OPTS: -Dfeature.http.proxy=true
+      GATEWAY_OPTS: -Dfeature.http.proxy=true -Dfeature.http.redirect=true
   rabbitmq:
     build: broker

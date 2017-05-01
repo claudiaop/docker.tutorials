@@ -20,6 +20,23 @@
   </service>
 
   <service>
+    <name>Http Redirect Service</name>
+    <accept>http://kaazing.example.com:8000/</accept>
+    <type>http.redirect</type>
+    <properties>
+      <location>https://kaazing.example.com:8000/</location>
+      <cache-control>max-age=0</cache-control> 
+      <status-code>302</status-code>
+    </properties>
+ 
+ 
+    <realm-name>demo</realm-name> 
+    <authorization-constraint>
+      <require-role>AUTHORIZED</require-role>
+    </authorization-constraint>
+  </service>
+
+  <service>
     <name>WSS Echo</name>
     <description>A service that echo's messages back for WSS</description>
     <accept>wss://kaazing.example.com:8000/</accept>
