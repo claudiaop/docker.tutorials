@@ -20,18 +20,14 @@
 
   <service>
     <name>Http Redirect Service</name>
-    <accept>http://kaazing.example.com:8000/</accept>
+    <accept>http://kaazing.example.com:8001/</accept>
     <type>http.redirect</type>
     <properties>
       <location>https://kaazing.example.com:8000/</location>
       <cache-control>max-age=0</cache-control> 
       <status-code>302</status-code>
     </properties>
- 
-    <realm-name>demo</realm-name> 
-    <authorization-constraint>
-      <require-role>AUTHORIZED</require-role>
-    </authorization-constraint>
+
   </service>
 
   <service>
@@ -46,6 +42,17 @@
       <!-- Only websockets coming from this origin can access this url -->
       <allow-origin>https://kaazing.example.com:8000/</allow-origin>
     </cross-site-constraint>
+  </service>
+
+  <service>
+    <name>WebSocket Redirect Service</name>
+    <accept>ws://kaazing.example.com:8001</accept>
+    <type>http.redirect</type>
+    <properties>
+      <location>wss://kaazing.example.com:8000/</location>
+      <cache-control>max-age=0</cache-control> 
+      <status-code>302</status-code>
+    </properties>
   </service>
 
   <security>

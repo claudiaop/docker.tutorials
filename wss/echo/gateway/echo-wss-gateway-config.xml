@@ -20,19 +20,13 @@
 
   <service>
     <name>Http Redirect Service</name>
-    <accept>http://kaazing.example.com:8000/</accept>
+    <accept>http://kaazing.example.com:8001/</accept>
     <type>http.redirect</type>
     <properties>
       <location>https://kaazing.example.com:8000/</location>
       <cache-control>max-age=0</cache-control> 
       <status-code>302</status-code>
     </properties>
- 
- 
-    <realm-name>demo</realm-name> 
-    <authorization-constraint>
-      <require-role>AUTHORIZED</require-role>
-    </authorization-constraint>
   </service>
 
   <service>
