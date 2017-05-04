@@ -29,3 +29,4 @@ RUN curl -LOk  https://github.com/kaazing/javascript.client.tutorials/files/3244
 
 # Add gateway config
 COPY echo-wss-gateway-config.xml conf/gateway-config.xml
+COPY log4j-config-verbose.xml conf/log4j-config.xml

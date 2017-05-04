@@ -32,4 +32,4 @@ ADD https://github.com/rabbitmq/rabbitmq-server/releases/download/rabbitmq_v3_6_
 
 # Add gateway config
 COPY amqp-rabbitmq-gateway-config.xml conf/gateway-config.xml
-
+COPY log4j_more_verbose.xml /kaazing-gateway/conf/log4j-config.xml

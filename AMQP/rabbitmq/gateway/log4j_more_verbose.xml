@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Copyright (c) 2007-2012, Kaazing Corporation. All rights reserved.
+-->
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">    
+    <appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{ISO8601} %-5p %t %40c - %m%n"/>
+        </layout>
+    </appender>
+    <!-- Transport loggers -->
+    <logger name="transport.http.accept.extendedHandshake"></logger>
+    <logger name="transport.http.accept.security"></logger>
+    <logger name="transport.http"></logger>
+    <logger name="transport.wsn"></logger>
+    <logger name="transport.wseb"></logger>
+    <logger name="transport.socks"></logger>
+ 
+    <!-- Gateway general and proxy traffic loggers -->
+    <logger name="com.kaazing.gateway.server.service.proxy"></logger>
+    <logger name="com.kaazing.gateway.server"></logger>
+    <logger name="com.kaazing.gateway.server.Gateway"></logger>
+ 
+    <!-- Clustering/Hazelcast loggers -->
+    <logger name="ha"></logger>
+    <logger name="messaging"></logger>
+    <logger name="messaging.ha"></logger>
+
+    <!-- Service-level loggers -->
+    <logger name="service.stomp.jms"><level value="debug"/></logger>
+
+    <!-- Per-session loggers -->
+    <logger name="session.logout"/>
+    <logger name="session.revalidate"/>
+    <logger name="http.revalidate"/>
+ 
+    <!-- Performance/Tools loggers -->
+    <logger name="performance.harness"></logger>
+    
+    <!-- Interesting class-specific loggers -->
+    <logger name="com.kaazing.gateway.server.transport.AbstractBridgeHandler"></logger>
+    <logger name="com.kaazing.gateway.server.transport.nio.AbstractNioAcceptor"></logger>
+    <logger name="com.kaazing.gateway.security.auth.SAMLLoginModule"></logger>
+    <!-- Log everything to stdout -->
+    <root>
+        <priority value="all"/>
+        <appender-ref ref="STDOUT"/>        
+    </root>
+</log4j:configuration>
