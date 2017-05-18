@@ -26,7 +26,7 @@
     <properties>
       <location>https://kaazing.example.com:8001/</location>
       <cache-control>max-age=0</cache-control> 
-      <status-code>302</status-code>
+      <status-code>301</status-code>
     </properties>
   </service>
 

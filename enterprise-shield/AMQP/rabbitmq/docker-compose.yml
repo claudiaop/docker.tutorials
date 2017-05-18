@@ -4,9 +4,10 @@ services:
     build: dmz
     ports:
       - "8000:8000"
+      - "8002:8002"
     hostname: "kaazing.example.com"
     environment:
-      GATEWAY_OPTS: -Dfeature.http.proxy=true
+      GATEWAY_OPTS: -Dfeature.http.proxy=true -Dfeature.http.redirect=true
   internal.example.com: 
     build: internal
     environment:

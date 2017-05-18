@@ -7,7 +7,7 @@
         Directory Service to serve up secure pages with, file
         in web directory are available via https
     </description>
-    <accept>http://kaazing.example.com:8000/</accept>
+    <accept>https://kaazing.example.com:8000/</accept>
     <type>directory</type>
 
     <properties>
@@ -27,7 +27,7 @@
     <properties>
       <location>https://kaazing.example.com:8000/</location>
       <cache-control>max-age=0</cache-control> 
-      <status-code>302</status-code>
+      <status-code>301</status-code>
     </properties>
 
   </service> 

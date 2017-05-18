@@ -34,6 +34,17 @@
     </connect-options>
   </service>
 
+  <service>
+    <name>Http Redirect Service</name>
+    <accept>http://kaazing.example.com:8002/</accept>
+    <type>http.redirect</type>
+    <properties>
+      <location>https://kaazing.example.com:8000/</location>
+      <cache-control>max-age=0</cache-control> 
+      <status-code>301</status-code>
+    </properties>
+  </service>
+
   <security>
     <keystore>
       <type>JCEKS</type>
