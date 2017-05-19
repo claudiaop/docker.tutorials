@@ -9,7 +9,7 @@
         authorized users
     </description>
 
-    <accept>https://kaazing.example.com:8000/</accept>
+    <accept>https://kaazing.example.com:443/</accept>
 
     <type>directory</type>
 
@@ -21,10 +21,10 @@
 
   <service>
     <name>Http Redirect Service</name>
-    <accept>http://kaazing.example.com:8001/</accept>
+    <accept>http://kaazing.example.com:80/</accept>
     <type>http.redirect</type>
     <properties>
-      <location>https://kaazing.example.com:8000/</location>
+      <location>https://kaazing.example.com:443/</location>
       <cache-control>max-age=0</cache-control> 
       <status-code>301</status-code>
     </properties>
@@ -33,7 +33,7 @@
   <service>
     <name>WSS Echo</name>
     <description>A service that echo's messages back for WSS</description>
-    <accept>wss://kaazing.example.com:8000/</accept>
+    <accept>wss://kaazing.example.com:443/</accept>
 
     <type>echo</type>
 
@@ -46,7 +46,7 @@
     </authorization-constraint>
 
     <cross-site-constraint>
-      <allow-origin>https://kaazing.example.com:8000/</allow-origin>
+      <allow-origin>https://kaazing.example.com:443/</allow-origin>
     </cross-site-constraint>
   </service>
 

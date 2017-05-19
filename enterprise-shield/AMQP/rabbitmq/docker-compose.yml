@@ -3,11 +3,11 @@ services:
   kaazing.example.com:
     build: dmz
     ports:
-      - "8000:8000"
-      - "8002:8002"
+      - "443:443"
+      - "80:80"
     hostname: "kaazing.example.com"
     environment:
-      GATEWAY_OPTS: -Dfeature.http.proxy=true -Dfeature.http.redirect=true
+      GATEWAY_OPTS: -Dfeature.http.proxy=true
   internal.example.com: 
     build: internal
     environment:

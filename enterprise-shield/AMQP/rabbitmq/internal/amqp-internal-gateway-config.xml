@@ -3,7 +3,7 @@
   <service>
     <name>AMQP Tutorial Service</name>
     <description>A service that proxys to an AMQP backend</description>
-    <accept>wss://internal.example.com:8000/path2/</accept>
+    <accept>wss://internal.example.com:443/path2/</accept>
     <connect>tcp://rabbitmq:5672</connect>
 
     <type>amqp.proxy</type>

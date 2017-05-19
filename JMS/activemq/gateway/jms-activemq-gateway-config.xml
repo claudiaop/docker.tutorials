@@ -8,7 +8,7 @@
         in web directory are available via https
     </description>
 
-    <accept>https://kaazing.example.com:8000/</accept>
+    <accept>https://kaazing.example.com:443/</accept>
 
     <type>directory</type>
 
@@ -20,11 +20,11 @@
 
   <service>
     <name>Http Redirect Service</name>
-    <accept>http://kaazing.example.com:8001/</accept>
+    <accept>http://kaazing.example.com:80/</accept>
     <type>http.redirect</type>
 
     <properties>
-      <location>https://kaazing.example.com:8001/</location>
+      <location>https://kaazing.example.com:443/</location>
       <cache-control>max-age=0</cache-control> 
       <status-code>301</status-code>
     </properties>
@@ -33,7 +33,7 @@
   <service>
     <name>JMS Tutorial Service</name>
     <description>A service that proxys to an JMS backend</description>
-    <accept>wss://kaazing.example.com:8000/</accept>
+    <accept>wss://kaazing.example.com:443/</accept>
 
     <type>jms</type>
 
@@ -50,7 +50,7 @@
 
     <cross-site-constraint>
       <!-- Only websockets coming from this origin can access this url -->
-      <allow-origin>https://kaazing.example.com:8000/</allow-origin>
+      <allow-origin>https://kaazing.example.com:443/</allow-origin>
     </cross-site-constraint>
   </service>
 
